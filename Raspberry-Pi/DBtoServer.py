@@ -15,7 +15,7 @@ client.switch_database('ftest')
 
 #def send_data_to_server(data):
 cred=pika.PlainCredentials('admin', 'password')
-connection = pika.BlockingConnection(pika.ConnectionParameters(host='34.224.98.65',credentials=cred))
+connection = pika.BlockingConnection(pika.ConnectionParameters(host='HOST IP',credentials=cred))
 print("connection-",connection)
 channel = connection.channel()
 channel.queue_declare(queue='local_queue', durable=True)
