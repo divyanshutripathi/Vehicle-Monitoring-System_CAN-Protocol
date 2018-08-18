@@ -22,7 +22,7 @@ export class RequestService {
     const header = new Headers();
     header.append("Content-Type","application/json");
     return this.http
-    .post("http://dtri.eraofiot.in:5005/service/showDetails",body,{headers:header})
+    .post("http://RESOURCE_URL/service/showDetails",body,{headers:header})
     .map(res=>res.json());
 
   }
@@ -31,7 +31,7 @@ export class RequestService {
     const header = new Headers();
     header.append("Content-Type","application/json");
     return this.http
-    .post("http://dtri.eraofiot.in:5005/centre/repair",body,{headers:header})
+    .post("http://RESOURCE_URL:5005/centre/repair",body,{headers:header})
     .map(res=>res.json());
   }
 
@@ -40,7 +40,7 @@ export class RequestService {
     console.log("in get notification fun");
     header.append("Content-Type","application/json");
     return this.http
-    .post("http://dtri.eraofiot.in:5005/alert",body,{headers:header})
+    .post("http://RESOURCE_URL:5005/alert",body,{headers:header})
     .map(res=>res.json());
   }
 
@@ -48,7 +48,7 @@ export class RequestService {
     const header = new Headers();
     header.append("Content-Type","application/json");
     return this.http
-    .post("http://dtri.eraofiot.in:5005/centre/clear",body,{headers:header})
+    .post("http://RESOURCE_URL:5005/centre/clear",body,{headers:header})
     .map(res=>res.json());
   }
 } 
