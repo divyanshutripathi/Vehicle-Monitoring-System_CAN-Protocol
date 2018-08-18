@@ -20,7 +20,7 @@ export class InfluxService {
     const header = new Headers();
     header.append("Content-Type", "application/json");
     return this.http
-      .post('http://34.224.98.65:3000/data', body, { headers: header })
+      .post('RESOURCE URL', body, { headers: header })
       .map(res => res.json());
 
   }
